@@ -1,0 +1,27 @@
+-- File: prime.tc
+let limit, number, counter: int;
+const x, y <- 3: string;
+
+  let i <- 5: int; 
+  let result, isPrime: bool;
+
+const start <- (): int => {
+
+  counter <- 0;
+  number <- 2;
+  limit <- readInt();
+
+  while number <= limit loop 
+    if counter < number then 
+      counter <- counter + 1;
+        writeInt(number);
+        --writeString(" ");
+    fi;
+    number <- limit + 1;
+  pool;
+  
+  --writeString("\n");
+  writeInt(counter);
+  
+  return 0;
+}
